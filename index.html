@@ -11,6 +11,10 @@
 </head>
 <body>
 
+    <!--    page preloder -->
+    <div id="pageLoader">
+        <div class="spinner"></div>
+    </div>
 
 <section id="main-wraper">
     <div class="container">
@@ -261,22 +265,13 @@
         });
     });
 
-//    $("#send-email").submit(function(e){
-//        // alert("Submitted");
-//        e.preventDefault();
-//        $form = $( this ).serialize();
-//        $.ajax({
-//            type: "post",
-//            url: "php/mail.php",
-//            headers: {
-//                "Accept": "application/json; odata=verbose"
-//            },
-//            data: $form,
-//            success: function (res) {
-//                alert(res);
-//            }
-//        });
-//    });
+$(document).ready(function () {
+    setTimeout(function(){
+        $("#pageLoader").addClass("hidden")
+    },500)
+});
+    
+    
 </script>
 </body>
 </html>

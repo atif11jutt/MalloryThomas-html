@@ -5,6 +5,63 @@
     font-family: Roboto;
 }
 
+
+/* page pre loader */
+
+#pageLoader{
+        position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250rem;
+    height: 250rem;
+    background: #fff;
+    transition: 0.4s ease-in-out;
+    border-radius: 50%;
+}
+
+#pageLoader.hidden{
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+}
+
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  margin: 100px auto;
+  background-color: #ff6661;
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+
+
+
+
 /* main section */
 
 #main-wraper {
